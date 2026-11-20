@@ -20,7 +20,7 @@ The business analyst uses the report to review account-level sales, returns, and
 
 ## Scope
 
-Use transactions dated September 1 through September 30, 2026, inclusive. Amounts are in US dollars represented as whole cents; do not convert or round them.
+Use transactions dated September 1 through September 30, 2026, inclusive. Amounts are in US dollars represented as whole cents; do not convert or round them. This report does not cover other months, taxes, currency conversion, or account balances.
 
 ## Human approval
 
