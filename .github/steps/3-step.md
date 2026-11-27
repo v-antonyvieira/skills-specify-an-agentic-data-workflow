@@ -38,7 +38,7 @@ GitHub Copilot can read your specification, write a program, and propose its cha
 ### ⌨️ Activity 2: Check that the report was generated
 
 1. Read Copilot's pull request description. Find its explanation of the report, the checks it ran, and a summary table with totals for **Known customers**, **Unmatched customers**, and **All September entries** in cents.
-1. Open **Files changed**. Find both generated reports in `reports/`. Then confirm that neither original file in `data/`, nor your specification in `specs/report-workflow.md`, has been changed.
+1. In **Files changed**, find `reports/customer-account-report.csv` and `reports/exceptions.csv`. Then confirm that neither original file in `data/`, nor your specification in `specs/report-workflow.md`, has been changed.
 1. Go back to the Conversation tab and scroll down to the pull request's checks. GitHub may ask you to approve running the checks - if so, allow them to run.
 1. Wait for **Generated artifacts** and **Reproduce and test** to pass. **Analyst evidence** will not pass yet: that check is waiting for your review in step 4.
 1. If **Generated artifacts** or **Reproduce and test** fails, comment on the pull request with `@copilot`, describe the problem shown, and ask it to correct the work in this same pull request. Leave **Analyst evidence** for your own review in step 4. Leave the pull request open and unmerged. Mona checks the report when the pull request opens, its description is edited, or a corrective commit is added.

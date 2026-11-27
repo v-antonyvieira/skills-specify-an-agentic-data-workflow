@@ -22,8 +22,8 @@ When you use AI within a workflow, you must always verify its output. A report c
    > ```
 
 1. Wait until Copilot reports that it has finished checking the reports and making any corrections. If it asks a question, answer it before continuing.
-1. Open the `customer-account-report.csv` in the pull request. Find the two customers from your **Expected results** table and compare their entry counts and net sales with your calculations.
-1. Open the `exceptions.csv` report. Find each listed entry in the original transaction file and confirm that its customer is missing from the customer list.
+1. In **Files changed**, find `reports/customer-account-report.csv`. Find the two customers from your **Expected results** table and compare their entry counts and net sales with your calculations.
+1. Open `reports/exceptions.csv` in **Files changed**. Find each listed entry in the original transaction file and confirm that its customer is missing from the customer list.
 1. In the pull request description, compare the **Known customers**, **Unmatched customers**, and **All September entries** totals with your specification's **Expected results**. Known customers plus unmatched customers must equal all September entries. You do not need to add the report rows again. If the summary is missing or anything disagrees, ask Copilot to correct it before continuing.
 
 <details>
@@ -37,7 +37,7 @@ When you use AI within a workflow, you must always verify its output. A report c
 
 ### ⌨️ Activity 2: Complete the review checklist
 
-1. In the repository's **Code** tab, switch from `main` to the branch shown at the top of Copilot's pull request.
+1. At the top of Copilot's pull request, select the branch name that starts with `copilot`. This opens the repository's **Code** tab on the pull request's branch. Confirm that the branch selector shows that branch, not `main`, before editing.
 1. Open `verification/review-evidence.md` and select the pencil icon. For each comparison you completed in Activity 1, replace `[ ]` with `[x]` beside the matching checklist item. 
 1. If a comparison reveals a problem, leave its box unchecked and ask Copilot to correct the report. Compare the updated report again before marking that item complete.
 1. When all four checks are complete and you are satisfied with the report, change **Decision** from `pending` to `approved`. Complete the checklist and approval yourself, not through Copilot, then commit the file to the pull request's branch.
@@ -52,7 +52,7 @@ When you use AI within a workflow, you must always verify its output. A report c
 - The checklist records your review, not new calculations. Use the **Expected results** you already wrote in step 2.
 - Mona requires all four checked boxes and `Decision: approved`. Automated checks still verify the report's figures independently; checked boxes do not prove that you inspected them.
 - If the checks don't start after Copilot pushes a change, open the **Actions** tab and approve the waiting workflow runs.
-- If your review was committed to `main` by mistake, put it on the pull request's branch before merging.
+- If your review was committed to `main` by mistake, open `verification/review-evidence.md` on `main` and copy the file's contents. Return to Copilot's pull request and select its branch name at the top. Open `verification/review-evidence.md`, select the pencil icon, and replace its contents with your completed review. Commit directly to the pull request's branch, then wait for all three checks to pass before merging.
 - If you merged too early, correct the work in another pull request and merge it after all checks pass. Then run **Step 4** manually on `main` in the Actions tab, entering the number of the pull request that produced current `main`.
 
 </details>
